@@ -87,9 +87,7 @@ final class PregMatchTypeSpecifyingExtension implements StaticMethodTypeSpecifyi
             $matchedType = PregMatchFlags::removeNullFromMatches($matchedType);
         }
 
-        $overwrite = false;
         if ($context->false()) {
-            $overwrite = true;
             $context = $context->negate();
         }
 
@@ -97,9 +95,7 @@ final class PregMatchTypeSpecifyingExtension implements StaticMethodTypeSpecifyi
             $matchesArg->value,
             $matchedType,
             $context,
-            $overwrite,
             $scope,
-            $node
         );
     }
 }
